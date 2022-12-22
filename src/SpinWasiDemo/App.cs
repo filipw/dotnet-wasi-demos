@@ -77,9 +77,9 @@ public static class App
             StatusCode = HttpStatusCode.BadRequest,
             Headers = new Dictionary<string, string>
             {
-                ["Content-Type"] = "text/plain"
+                ["Content-Type"] = "text/json"
             },
-            BodyAsString = JsonSerializer.Serialize(new { error = "Invalid request" })
+            BodyAsBytes = JsonSerializer.SerializeToUtf8Bytes(new { error = "Invalid request" })
         };
     }
 
