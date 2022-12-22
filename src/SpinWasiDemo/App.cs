@@ -9,6 +9,7 @@ public static class App
 {
     private static readonly Dictionary<string, Func<HttpRequest, HttpResponse>> _routes = new()
     {
+        { Warmup.DefaultWarmupUrl, Init},
         { "/hello", Hello },
         { "/qr", Qr }
     };
@@ -27,6 +28,14 @@ public static class App
         };
     }
 
+    private static HttpResponse Init(HttpRequest httpRequest)
+    {
+        return new HttpResponse
+        {
+            StatusCode = HttpStatusCode.OK
+        };
+    }
+
     private static HttpResponse Hello(HttpRequest httpRequest)
     {
         return new HttpResponse
@@ -36,7 +45,7 @@ public static class App
             {
                 ["Content-Type"] = "text/plain"
             },
-            BodyAsString = "Hello from C# in a web WASI worker!",
+            BodyAsString = "Hello from C#!"
         };
     }
 
@@ -45,7 +54,7 @@ public static class App
         var raw = httpRequest.Body.AsBytes();
         if (raw != null && raw.Length > 0) 
         {
-            var input = JsonSerializer.Deserialize<QrInput>(raw);
+            var input = JsonSerializer.Deserialize<QrPayload>(raw);
             if (input != null && input.Url != null)
             {
                 var qr = QrCode.EncodeText(input.Url.ToLowerInvariant(), QrCode.Ecc.Medium);
@@ -73,7 +82,8 @@ public static class App
             BodyAsString = JsonSerializer.Serialize(new { error = "Invalid request" })
         };
     }
-    record QrInput
+
+    record QrPayload
     {
         public string Url { get; set; }
     }
