@@ -1,0 +1,16 @@
+spin_version = "1"
+authors = ["Filip W"]
+description = "Spin Wasi Demo"
+name = "SpinWasiDemo"
+version = "1.0.0"
+trigger = { type = "http", base = "/" }
+
+[[component]]
+id = "spin-wasi-demo"
+source = "bin/Release/net7.0/SpinWasiDemo.wasm"
+
+[component.build]
+command = "dotnet build -c Release"
+
+[component.trigger]
+route = "/..."

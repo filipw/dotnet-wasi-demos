@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWizer>true</UseWizer>
+    <WasiTrim>false</WasiTrim> <!-- this would trim some Spin code and fail -->
+  </PropertyGroup>
+
+	<ItemGroup>
+      <!-- 0.1.2 uses bulk memory which is currently incompatible with wizer-->
+    	<PackageReference Include="Wasi.Sdk" Version="0.1.1" />
+      <PackageReference Include="Fermyon.Spin.Sdk" Version="0.1.0-alpha2" />
+      <PackageReference Include="Net.Codecrete.QrCodeGenerator" Version="2.0.3" />
+	</ItemGroup>
+</Project>

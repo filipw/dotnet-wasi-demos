@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4DFC8EE6-A36D-4839-B4B5-22C1CD81B1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinWasiDemo", "src\SpinWasiDemo\SpinWasiDemo.csproj", "{60688E5C-9410-4E43-8CB2-10AD8ECE52C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasiDemo", "src\WasiDemo\WasiDemo.csproj", "{E1FB7B7A-CD17-4F99-9670-A432C5FE2ECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60688E5C-9410-4E43-8CB2-10AD8ECE52C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60688E5C-9410-4E43-8CB2-10AD8ECE52C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60688E5C-9410-4E43-8CB2-10AD8ECE52C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60688E5C-9410-4E43-8CB2-10AD8ECE52C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1FB7B7A-CD17-4F99-9670-A432C5FE2ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1FB7B7A-CD17-4F99-9670-A432C5FE2ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1FB7B7A-CD17-4F99-9670-A432C5FE2ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1FB7B7A-CD17-4F99-9670-A432C5FE2ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60688E5C-9410-4E43-8CB2-10AD8ECE52C1} = {4DFC8EE6-A36D-4839-B4B5-22C1CD81B1E8}
+		{E1FB7B7A-CD17-4F99-9670-A432C5FE2ECB} = {4DFC8EE6-A36D-4839-B4B5-22C1CD81B1E8}
+	EndGlobalSection
+EndGlobal
